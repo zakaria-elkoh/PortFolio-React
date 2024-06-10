@@ -1,0 +1,24 @@
+
+.back-to-top {
+    background-color: #fff;
+    color: var(--icon-clr);
+    width: 60px;
+    height: 60px;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.26);
+    z-index: 9999;
+    cursor: pointer;
+    transition: .3s;
+    opacity: .9;
+    display: none;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+}

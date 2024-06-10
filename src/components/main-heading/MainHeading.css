@@ -1,0 +1,39 @@
+.main-heading {
+    padding-block: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main-heading h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 600;
+    letter-spacing: 6px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .6px #ea4020;
+    -webkit-text-stroke: .3px var(--dark-white-clr);
+}
+
+.main-heading h3 {
+    font-size: clamp(1.2rem, 5vw, 1.4rem);
+    position: relative;
+    margin: -13px auto;
+    width: fit-content;
+    color: var(--heading-clr);
+    color: #ea4020;
+}
+
+.main-heading h3::after,
+.main-heading h3::before {
+    content: "";
+    position: absolute;
+    background-color: #ea4020;
+    height: 3px;
+    width: 40px;
+    top: 50%; left: 104%;
+    transform: translateY(-50%);
+}
+
+.main-heading h3::before {
+    transform: translateX(-100%);
+    left: -5%;
+}

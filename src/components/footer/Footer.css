@@ -1,0 +1,28 @@
+footer {
+    text-align: center;
+    background-color: var(--footer-bg-clr);
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08);
+}
+
+footer .social-media {
+    padding-block: 40px;
+}
+
+footer .social-media i {
+    font-size: 2rem;
+    color: var(--primary-clr);
+    margin-inline: 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+footer .social-media i:hover {
+    color: var(--hover-clr);
+    transform: scale(1.05);
+}
+
+footer p {
+    padding-block: 20px;
+    font-style: 1.4em;
+    color: var(--p-clr);
+}
