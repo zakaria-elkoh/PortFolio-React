@@ -1,8 +1,13 @@
+import MainHeading from "@/components/main-heading/MainHeading";
 import "./About.css";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation("global");
+
   return (
     <section className="about-section section" id="about">
+      <MainHeading title={t("about")} description={t("about me")} />
       <div className="about container">
         <div className="img">
           <img

@@ -1,0 +1,126 @@
+
+.box {
+    background-color: var(--card-bg-clr);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+    transition: .3s;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.box:hover {
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25);
+}
+
+.box .img-wrapper {
+    overflow: hidden;
+    height: 250px;
+}
+
+#projects .btn {
+    color: #ea4020;
+    background-color: transparent;
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px 30px;
+    border: 2px solid #ea4020;
+    width: fit-content;
+    border-radius: 4px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+#projects .btn:hover {
+    color: #fff;
+    background-color: #ea4020;
+}
+
+.box:hover img {
+    animation: 16s from-top-to-bottom linear;
+}
+
+@keyframes from-top-to-bottom {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-70%);
+    }
+}
+
+.box .img-wrapper img {
+    max-width: 100%;
+}
+
+.box .text {
+    padding: 20px 20px 30px;
+    border-top: 1px solid rgba(142, 142, 142, 0.297);
+}
+
+.box .text h2 {
+    text-transform: capitalize;
+    color: var(--heading-clr);
+    /* color: #ea4020; */
+    opacity: .9;
+    letter-spacing: 1px;
+    /* padding-left: 8PX; */
+    /* border-left: 3px solid #ea4020; */
+}
+
+.box .text p {
+    color: var(--p-clr);
+    font-size: .9rem;
+    
+}
+
+.box .text h3 {
+    text-transform: capitalize;
+    color: var(--heading-clr);
+    opacity: .6;
+    margin-block: 18px 4px;
+}
+
+.box .text span {
+    background-color: var(--card-bg-clr);
+    color: var(--dark-white-clr);
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin: 8px 4px 4px 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(128, 128, 128, 0.196);
+}
+
+.box .text .btns {
+    margin-top: 15px;
+}
+
+.box .text a {
+    color: var(--primary-clr);
+    display: inline-block;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    border: 2px solid var(--primary-clr);
+    width: fit-content;
+    border-radius: 4px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.box .text a:nth-child(1):hover,
+.box .text a:nth-child(2) {
+    color: var(--secondary-clr);
+    background-color: var(--primary-clr);
+}
+
+.box .text a:nth-child(2):hover,
+.box .text a:nth-child(1) {
+    color: var(--primary-clr);
+    background-color: var(--secondary-clr);
+}

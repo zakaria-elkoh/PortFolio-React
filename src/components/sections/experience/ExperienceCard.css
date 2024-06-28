@@ -1,0 +1,63 @@
+
+.exp-box {
+    background-color: var(--card-bg-clr);
+    display: flex;
+    align-items: start;
+    gap: 40px;
+    max-width: 820px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.07);
+
+}
+
+.exp-box .date {
+    background-color: var(--primary-clr);
+    color: var(--secondary-clr);
+    padding: 8px 6px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: .83rem;
+    width: 350px;
+}
+
+.exp-box .text h3 {
+    color: var(--heading-clr);
+}
+
+.exp-box .text p {
+    margin: 12px 0;
+    color: var(--p-clr);
+    line-height: 1.4;
+    font-size: clamp(.9rem, 3vw, 1rem);
+}
+
+.exp-box .text span {
+    color: var(--heading-clr);
+}
+
+@media screen and (max-width: 852px) {
+    
+    .exp-box {
+        margin: 30px auto;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .exp-box .date {
+        width: fit-content;
+        margin-top: -35px;
+    }
+    
+    .exp-box .text {
+        margin-top: -10px;
+        /* background-color: rgb(166, 255, 163); */
+    }
+    
+    .exp-box .text p {
+        margin: 8px 0;
+    }
+
+}

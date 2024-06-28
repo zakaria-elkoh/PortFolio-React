@@ -116,9 +116,9 @@
   --warning-clr: #ffbb33;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 
-}
+} */
 
 .dark-mode {
   --primary-clr: aliceblue;     
@@ -171,6 +171,18 @@ html {
 ::selection {
   color: var(--secondary-clr);
   background: var(--primary-clr);
+}
+
+.section {
+  padding-block: 50px;
+}
+
+.section:nth-child(even) {
+  background-color: var(--even-section-bg-clr);
+}
+
+.section:nth-child(odd) {
+  background-color: var(--odd-section-bg-clr);
 }
 
 li {

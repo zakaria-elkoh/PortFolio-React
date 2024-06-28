@@ -9,7 +9,7 @@ nav {
     background-color: var(--nav-bg-clr);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.093);
     position: relative;
-    z-index: 9999;
+    z-index: 49;
     transition: 1s position;
 }
 

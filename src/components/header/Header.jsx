@@ -1,15 +1,24 @@
 import { useTranslation } from "react-i18next";
 import "./Header.css";
+import "../../index.css";
 import LangSelect from "../lang-select/LangSelect";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
-const Header = () => {
+const Header = ({ isDardMode, setIsDarkMode }) => {
   const { t } = useTranslation("global");
 
   return (
     <div className="">
       <header id="home">
         <nav>
-          <div className="wrapper container">
+          <div className="wrapper container  bg-secondary dark:bg-primary">
             <a className="logo py-6" href="/">
               <img src="./imgs/logo/logo-orange.png" id="logo" />
             </a>
@@ -35,10 +44,32 @@ const Header = () => {
                 <a href="#contact">contact</a>
               </li>
               <li>
-                <input className="dark-mode-toggle" type="checkbox" />
+                <input
+                  onClick={() => {
+                    setIsDarkMode(!isDardMode);
+                    localStorage.setItem("isDarkMode", !isDardMode);
+                  }}
+                  className="dark-mode-toggle"
+                  type="checkbox"
+                />
               </li>
             </ul>
-            <i className="fa-solid fa-bars menu-icon"></i>
+            <div>
+              <Sheet>
+                <SheetTrigger>
+                  <i className="fa-solid fa-bars menu-icon"></i>
+                </SheetTrigger>
+                <SheetContent side={"left"} className="bg-white">
+                  <SheetHeader>
+                    <SheetTitle>Are you absolutely sure?</SheetTitle>
+                    <SheetDescription>
+                      This action cannot be undone. This will permanently delete
+                      your account and remove your data from our servers.
+                    </SheetDescription>
+                  </SheetHeader>
+                </SheetContent>
+              </Sheet>
+            </div>
             <LangSelect />
           </div>
         </nav>
@@ -50,11 +81,10 @@ const Header = () => {
                 Hi There, <span className="color-[#ea4020]">I'm</span>
               </h4>
               <h1>
-                {" "}
-                <span>Zakaria</span> Elkoh
+                <span> {t("firstName")}</span> {t("lastName")}
               </h1>
-              <h4>
-                Full-Stack <span id="writer">Developer</span>
+              <h4 className="capitalize">
+                Full-Stack <span id="writer">{t("developer")}</span>
               </h4>
               <p>{t("header.description")}</p>
               {/* <!-- <a className='btn' href='./contact.html'>contact me</a> --> */}
@@ -63,7 +93,7 @@ const Header = () => {
                 download="Zakaria-Elkoh-CV"
                 href="./imgs/docs/ZAKARIA_ELKOH_CV.pdf"
               >
-                download cv
+                {t("download")} cv
               </a>
             </div>
             <div className="img-and-icons">

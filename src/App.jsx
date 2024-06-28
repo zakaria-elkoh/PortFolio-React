@@ -1,18 +1,15 @@
+import { useState } from "react";
 import "./App.css";
-import BackToTop from "./components/back-to-top/BackToTop";
-import Footer from "./components/footer/Footer";
-import Header from "./components/header/Header";
-import MainHeading from "./components/main-heading/MainHeading";
-import About from "./components/sections/about/About";
+import Home from "./pages/Home";
 
 function App() {
+  const [isDardMode, setIsDarkMode] = useState(
+    localStorage.getItem("isDarkMode") === "true"
+  );
+
   return (
-    <main className="">
-      <Header />
-      <MainHeading title="about" description="about me" />
-      <About />
-      <BackToTop />
-      <Footer />
+    <main className={isDardMode ? "dark-mode" : ""}>
+      <Home isDardMode={isDardMode} setIsDarkMode={setIsDarkMode} />
     </main>
   );
 }

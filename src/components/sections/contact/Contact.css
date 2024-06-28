@@ -1,0 +1,218 @@
+
+.contact {
+    /* background-color: #1F1D36;
+    color: #fff; */
+}
+
+.contact-content {
+    display: flex;
+    gap: 40px;
+}
+
+.contact-content h3 {
+    color: #ea4020;
+}
+
+
+/* .contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--heading-clr);
+    text-transform: capitalize;
+    font-size: 2rem;
+} */
+
+.contact form {
+    padding-block: 30px;
+    flex-basis: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.contact form input,
+.contact form textarea {
+    background-color: var(--inputs-bg-clr);
+    color: var(--dark-white-clr);
+    padding: 14px 18px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--primary-clr);
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.07);
+}
+
+.contact form > * {
+    padding: 14px 18px;
+}
+
+.contact form input {
+    margin-bottom: 15px;
+}
+
+.contact form textarea {
+    height: 200px;
+}
+
+.contact form .btn {
+    color: var(--secondary-clr);
+    background-color: var(--primary-clr);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    width: 80px;
+    height: 40px;
+    margin-top: 20px;
+    border: 0;
+    border-radius: 4px;
+    transition: .3s;
+    align-self: flex-end;
+    display: grid;
+    padding: 0;
+    place-items: center;
+    cursor: pointer;
+}
+
+.contact form .btn.active i {
+    animation: roraring 1s linear infinite;
+}
+
+@keyframes roraring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.contact form .btn:hover {
+    background-color: var(--hover-clr);
+}
+
+.contact form .submition-alert {
+    background-color: #fbfbfb;
+    width: 400px;
+    position: fixed;
+    top: 120px;
+    right: -110%;
+    padding: 10px 38px 10px 16px;
+    font-size: .8rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.171);
+    border-left: solid 3px var(--danger-clr);
+    transition: .5s;
+}
+
+.contact form .submition-alert.active {
+    right: 20px;
+    animation: alert-animation 1s;
+}
+
+@keyframes alert-animation {
+    0% {
+        right: -110%;
+    }
+    25% {
+        right: 100px;
+    }
+    50% {
+        right: -30px;
+    }
+    75% {
+        right: 65px;
+    }
+    75% {
+        right: 20px;
+    }
+}
+
+.contact form .submition-alert p {
+    color: var(--danger-clr);
+}
+
+.contact form .submition-alert i {
+    background-color: rgb(230, 230, 230);
+    color: #fff;
+    border-radius: 50%;
+    height: 23px;
+    width: 23px;
+    line-height: 23px;
+    text-align: center;
+    position: absolute;
+    top: 50%; right: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.contact form .submition-alert i:hover {
+    background-color: rgb(217, 217, 217);
+}
+
+.contact .info {
+    flex-basis: 35%;
+    min-width: 276px;
+    padding-top: 30px;
+}
+
+.contact .info h3,
+.contact form h3 {
+    color: var(--heading-clr);
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+
+.contact .info div:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.contact .info div {
+    color: var(--p-clr);
+    font-size: .8rem;
+}
+
+
+.contact .info div p,
+.contact .info div a  {
+    color: var(--dark-white-clr);
+    font-size: 1rem;
+}
+
+.contact .info i {
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
+.contact .info a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 850px) {
+    
+    .contact-content {
+        gap: 20px;
+    }
+
+}
+
+@media (max-width: 730px) {
+    
+    .contact-content {
+        flex-direction: column;
+    }
+
+    
+    .contact form {
+        order: 2;
+    }
+
+    
+    .contact form .submition-alert {
+        width: 300px;
+    }
+}
