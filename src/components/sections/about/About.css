@@ -1,5 +1,6 @@
 
 .about-section {
+    background-color: var(--odd-section-bg-clr) !important;
 }
 
 .about {

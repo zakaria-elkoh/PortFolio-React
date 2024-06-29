@@ -24,7 +24,9 @@ const ProjectCard = () => {
           <a href="https://denteloo.netlify.app/" target="_blank">
             live demo
           </a>
-          <a href="#">source code</a>
+          <a href="#" className="ml-2">
+            source code
+          </a>
         </div>
       </div>
     </div>

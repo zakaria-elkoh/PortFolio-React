@@ -132,8 +132,8 @@
   --footer-bg-clr: #111;
   --card-bg-clr: rgba(130, 130, 130, 0.181);
   --inputs-bg-clr: rgba(231, 231, 231, 0.091);
-  --odd-section-bg-clr: rgba(0, 0, 0, 0.9);
-  --even-section-bg-clr: rgba(0, 0, 0, 0.85);
+  --odd-section-bg-clr: #000000e6;
+  --even-section-bg-clr: #000000d9;
   
   
   /* ================= content colors ================= */
